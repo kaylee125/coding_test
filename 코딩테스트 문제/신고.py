@@ -1,5 +1,5 @@
 def solution(id_list, report, k):
-    #key:신고받은 사람 value:신고한 사람으로 dict만들기
+    
     # 한줄코드: rep_dict={id:[] for id in id_list}
     rep_dict=dict()
     for id in id_list:
@@ -10,6 +10,7 @@ def solution(id_list, report, k):
 
     for x in set(report):#set사용으로 중복 제거함
         rep=x.split()
+        #key:신고받은 사람 value:신고한 사람
         rep_dict[rep[1]].append(rep[0]) #rep_dict[rep[1]]은 객체가 리스트이므로 append()가능
     
     

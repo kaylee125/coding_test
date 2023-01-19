@@ -6,4 +6,4 @@ def solution(x):
     if x%sum==0:
         return True
     return False
-solution(10)
+print(solution(10))
