@@ -1,24 +1,20 @@
 def solution(n, words):
-    answer = [0,0]#번호,차례
-    word_list=[]
-    cnt=0
-
     for i in range(1,len(words)):
-        
-        #한글자인 단어 or 이전에 등장했던 단어
-        if words[i] in word_list or len(words[i])==1 or words[i-1][-1]!=words[i][0]:
-            return answer 
-        
+        if len(words[i])==1:
+            return -1
+        #틀리는 조건
+        #1.앞 단어의 끝 철자와 현재 단어의 첫번째 철자가 일치하지 않거나
+        #2.기존에 나왔었던 단어가 또 나오는 경우 
+        if words[i][0]!=words[i-1][-1] or words[i] in words[:i]:
+            #탈락한 사람의 번호
+            number=(i%n)+1
+            #몇번째 차례에 탈락했는지
+            order=int((i/n)+1)
+            return [number,order]
+            
+    else:
+        return [0,0]
 
-        else:
-            word_list.append(words[i])
-
-    
-
-
-       
-        
-
-    return 
 
 print(solution(3,["tank", "kick", "know", "wheel", "land", "dream", "mother", "robot", "tank"]	))
+print(solution(2,["hello", "one", "even", "never", "now", "world", "draw"]))

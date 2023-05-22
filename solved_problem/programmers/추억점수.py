@@ -4,6 +4,7 @@ def solution(name, yearning, photo):
     yearning_score=0
     #딕셔너리 만들기
     dic={key:value for key,value in zip(name,yearning)}
+    # dic=dict(zip(name,yearning))
     
     for p in photo:
         

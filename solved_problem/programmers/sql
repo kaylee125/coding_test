@@ -1,0 +1,4 @@
+select avg(salary)
+from employees
+group by branch_id
+having avg(salary)>(select avg(salary) from employees)
