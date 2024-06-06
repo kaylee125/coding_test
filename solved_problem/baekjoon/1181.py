@@ -1,5 +1,5 @@
 import sys
-sys.stdin=open('baekjoon/input.txt','r')
+sys.stdin=open('input.txt','r')
 
 n=int(input())
 w_arr=[]
