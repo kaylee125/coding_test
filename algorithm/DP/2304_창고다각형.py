@@ -18,7 +18,6 @@ for i in range(n):
         max_x=x
         max_y=y
 
-print(squares)
 ans=0
 curr=0
 # #왼쪽~ 최대기둥까지
