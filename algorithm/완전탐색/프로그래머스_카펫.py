@@ -41,6 +41,7 @@ def solution2(brown,yellow):
 
     for i in range(1,yellow+1):
         if yellow%i==0:
+            #xy=yellow면적
             x=i
             y=yellow//i
             if 2*x+2*y+4==brown:
